@@ -21,4 +21,7 @@ authorised
 permitAll - устанавливает разрешения на доступ к определенным адресам
 
 ```java .antMatchers("/", "/index").permitAll()
-.antMatchers("/api/admin/**").access("hasAnyAuthority('ADMIN')") ```
+.antMatchers("/api/admin/**").access("hasAnyAuthority('ADMIN')") ``` 
+
+Table 11.1. Common built-in expressions 
+ 
