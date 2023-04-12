@@ -13,3 +13,12 @@ Spring Security это Java/Java EE фреймворк, предоставляю
 - UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 ```
 Позволяет получить из источника данных объект пользователя и сформировать из него объект UserDetails который будет использоваться контекстом Spring Security.
+
+# Расспросить про конфигурацию (permitAll, authorised и т.д.)
+authorised
+
+ antMatcher(“/service”) сопоставляет путь запроса только с “/service”, в то время как mvcMatcher(“/service”) сопоставляет с “/service”, “/service.html”, “/service.abc”.
+permitAll - устанавливает разрешения на доступ к определенным адресам
+
+```java .antMatchers("/", "/index").permitAll()
+.antMatchers("/api/admin/**").access("hasAnyAuthority('ADMIN')") ```
