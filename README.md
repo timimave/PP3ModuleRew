@@ -12,3 +12,4 @@ Spring Security это Java/Java EE фреймворк, предоставляю
 ```java 
 - UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 ```
+Позволяет получить из источника данных объект пользователя и сформировать из него объект UserDetails который будет использоваться контекстом Spring Security.
